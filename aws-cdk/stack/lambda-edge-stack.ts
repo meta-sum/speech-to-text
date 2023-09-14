@@ -17,7 +17,7 @@ export class LambdaEdgeStack extends cdk.Stack {
         const modifyS3PathFunc = new lambda.Function(this, 'ModifyS3Path', {
             description:
                 'Lambda@Edge function to modify cloudfront path mapping.',
-            runtime: lambda.Runtime.NODEJS_10_X,
+            runtime: lambda.Runtime.NODEJS_18_X,
             handler: 'modifyS3Path.handler',
             code: lambda.Code.asset(
                 `${LAMBDA_FUNCTIONS_DIST_FOLDER}/modifyS3Path`
